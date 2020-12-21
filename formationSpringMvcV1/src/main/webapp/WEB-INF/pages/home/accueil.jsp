@@ -9,7 +9,7 @@
 
 <link href='<c:url value="/resources/css/rotating-card.css" />'
 	rel="stylesheet" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
 
 <title>Accueil</title>
 </head>
@@ -63,10 +63,10 @@
     .btn-nous-contacter {
     transition: all 0.3s ease;
     color: #fff;
-    border: 2px solid #ff4b68;
+    border: 2px solid #E6BF26;
     border-radius: 3px;
     padding: 10px 30px;
-    background-color: #ff4b68;
+    background-color: #E6BF26;
     min-width: 300px;
 }
     
@@ -75,16 +75,27 @@
     clip:rect(10px,190px,190px,10px);
     }
     
-    .home-banner {
+    @media (min-width: 1400px) {
+    
+    .home-banner  {
+    border-image: url("<c:url value="/resources/images/gold_color.jpg" />") 2480;
+    border-right: 260px solid ;
+    border-left: 260px solid;
+    }
+    
+    }
+    
+    .home-banner  {
     text-align: center;
     height: 100vh;
-    background-image: url("<c:url value="/resources/images/foodtruck1.jpg" />");
+    background-image: url("<c:url value="/resources/images/logo18.jpg" />");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 100px;
     }
     
     .home-bottom-banner {
@@ -172,12 +183,13 @@
     margin-bottom: 8px;
     font-size: 38px;
     font-weight: bold;
-    color: #fff;
+    color: #000;
+    text-align: bottom;
 }
 
 .home-banner-content p {
     font-size: 22px;
-    color: white;
+    color: black;
     margin-bottom: 16px;
 }
 
@@ -185,13 +197,13 @@
     color: #000;
 }
 .home-bottom-banner h2 {
-    color: #ff4b68;
+    color: #E6BF26;
     font-size: 30px;
     font-weight: bold;
     margin-top: 70px;
 }
 .testimonial {
-    background-color: #ff4b68;
+    background-color: #E6BF26;
     color: #fff;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -199,8 +211,8 @@
 
 .home-btn {
     color: #fff;
-    background-color: #ff4b68;
-    border: 2px solid #ff4b68;
+    background-color: #E6BF26;
+    border: 2px solid #E6BF26;
     border-radius: 3px;
     padding: 6px 16px;
     transition: all 0.3s ease;
@@ -211,7 +223,7 @@
 
 .btn-nous-contacter-reverse {
     transition: all 0.3s ease;
-    color: #ff4b68;
+    color: #E6BF26;
     border: 2px solid #fff;
     border-radius: 3px;
     padding: 10px 30px;
@@ -250,7 +262,7 @@ margin: auto;
 
 .carousel{
 height:350px;
-background-image: url("<c:url value="/resources/images/bck.png" />");
+background-image: url("<c:url value="/resources/images/gold_color3.jpg" />");
 background-size: cover;
 background-repeat: no-repeat;
 margin-bottom: 30px;
@@ -265,6 +277,8 @@ margin-bottom: 30px;
 
 </style>
 <body>
+
+<header class="header">
 	<!-- navbar -->
 	
 	<!-- navbar end -->
@@ -274,21 +288,17 @@ margin-bottom: 30px;
 	<c:if test="${ empty sessionScope.user }">
 		<jsp:include page='../includes/navbar.jsp' />
 	</c:if>
+</header>	
 	
 	<!--  content -->
-
-
-
     <div class="site-content">
-      
-<div id="home-banner" class="home-banner" >
+<div id="home-banner" class="home-banner">
   <div  class="home-banner-content">
     <h1>
-      FAITES VENIR LE PARIS TRUCK CHEZ VOUS OU SUR VOTRE LIEU DE TRAVAIL
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      BIENVENUE 
     </h1>
-    <p>
-      Faites de votre <b>repas</b> un moment de découverte et de plaisir <br>grâce à notre foodtruck.
-    </p>
+    
     <br><br>
     <div class="col-xs-12 text-center list-inline hidden-xs">
       <li><a class="home-btn" href="<c:url value='/inscription/pre'/>">Inscrivez-vous</a></li>
@@ -302,9 +312,9 @@ margin-bottom: 30px;
       <div class="col-xs-12 h1-orange text-center">
         <br>
         <br>
-        <h2>GAGNEZ DU TEMPS POUR CE QUI COMPTE <br> <b> <span class="home-black">AVEC NOTRE SITE DE COMMANDE EN LIGNE</span></b></h2>
+        <h2>GAGNEZ DU TEMPS POUR CE QUI COMPTE <br> <b> <span class="home-black">AVEC NOTRE OUTILS DE GESTION DU RESEAUX</span></b></h2>
         <p>
-          Nous travaillons chaque jour pour offrir à vos collaborateurs les meilleurs repas. <br>
+          Nous travaillons chaque jour pour offrir le meilleur système pour votre réseaux. <br>
           Comblez leurs attentes grâce à la performance de notre service de restauration par l'intermédiaire de notre food trucks .
         </p>
         <br>
@@ -314,9 +324,46 @@ margin-bottom: 30px;
   </div>
 </div>
 
-<div class="home-banner-mobile">
-
+<br>
+<br>
+<br>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" style=" width: 500px;">
+    <div class="carousel-item active" style=" margin-top: 0px; margin-left: px">
+<A href="<c:url value='/static/conseil'/>"><img class="mx-auto" width="100%" src="<c:url value="/resources/images/sam1.png" />" alt="First slide"></A>
+    <h3>Samuel</h3>
+	</div>
+    <div class="carousel-item" style=" margin-top: 0px; ">
+<A href="#"><img class="mx-auto" width="100%" src="<c:url value="/resources/images/sam1.png" />" alt="Second slide"></A>
+    <h3 style="">Erwan</h3>
+    </div>
+    <div class="carousel-item" style=" margin-top: 0px;">
+<A href="<c:url value='/static/conseil'/>"><img class="mx-auto" width="100%" src="<c:url value="/resources/images/sam1.png" />" alt="First slide"></A>
+    <h3>Stella</h3>
+    </div>
+    <div class="carousel-item" style=" margin-top: 0px;">
+<A href="<c:url value='/static/bestOf'/>"><img class="mx-auto" width="100%" src="<c:url value="/resources/images/sam1.png" />" alt="First slide"></A>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
+
+
+<!-- <div class="home-banner-mobile"> -->
+
+<!-- </div> -->
 
 <div class="home-bottom-banner">
   <div class="container">
@@ -361,7 +408,7 @@ margin-bottom: 30px;
       <div class="col-xs-12 h1-orange text-center">
         <br>
         <br>
-        <h2>UNE MEILLEURE ALTERNATIVE<br> <b> <span class="home-black">POUR VOTRE ENTREPRISE</span></b></h2>
+        <h2>UNE MEILLEURE MANIERE DE CHANGER DES VIE<br> <b> <!-- <span class="home-black">POUR VOTRE ENTREPRISE</span></b></h2> -->
         <p>
           Parce que votre satisfaction est notre priorité, nous mettons <br>
           un point d'honneur à ce que notre service corresponde à vos critères de sélection.
@@ -396,41 +443,8 @@ margin-bottom: 30px;
   </div>
 </div>
 
-<br>
-<br>
-<br>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner" style=" width: 500px;">
-    <div class="carousel-item active" style=" margin-top: 0px; margin-left: 30px">
-<A href="<c:url value='/static/carto'/>"><img class="mx-auto" width="450px" src="<c:url value="/resources/images/carte.png" />" alt="First slide"></A>    
-	<div style="width: 450px;"><h3 >La Localisation</h3></div>
-	</div>
-    <div class="carousel-item" style=" margin-top: 60px; ">
-<A href="#"><img class="mx-auto" width="100%" src="<c:url value="/resources/images/Sale.png" />" alt="Second slide"></A>
-    <h3 style="">Les Promotions</h3>
-    </div>
-    <div class="carousel-item" style=" margin-top: 0px;">
-<A href="<c:url value='/static/conseil'/>"><img class="mx-auto" width="100%" src="<c:url value="/resources/images/conseil.png" />" alt="First slide"></A>
-    <h3>Les Conseils</h3>
-    </div>
-    <div class="carousel-item" style=" margin-top: 60px;">
-<A href="<c:url value='/static/bestOf'/>"><img class="mx-auto p-5" width="100%" src="<c:url value="/resources/images/top_food.png" />" alt="First slide"></A>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+
+<%-- 
 
 <div class="testimonial">
   <div class="container text-center">
@@ -460,7 +474,9 @@ margin-bottom: 30px;
     <br>
     <br>
   </div>
-</div>
+</div> 
+
+--%>
     </div>
     
 
