@@ -11,11 +11,23 @@
       <li class="nav-item active">
         <a class="nav-link" href="<c:url value='/'/>">Accueil <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
+      <%-- <li class="nav-item active">
         <a class="nav-link" href="<c:url value='/article/articles/'/>">Catalogue <span class="sr-only">(current)</span></a>
+      </li> --%>
+      <li class="nav-item active">
+        <a class="nav-link" href="<c:url value='/article/articles/'/>">Service <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="<c:url value='/'/>">OmegaPro <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="<c:url value='/article/partenaires'/>">Partenaires <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="<c:url value='/'/>">Temoignages <span class="sr-only">(current)</span></a>
       </li>
       
-      <li class="nav-item">
+      <%-- <li class="nav-item">
 				<div class="dropdown">
 					<button class="nav-link" type="button"
 						id="dropdownMenuButton" data-toggle="dropdown"
@@ -29,7 +41,7 @@
 						</c:forEach>
 					</div>
 				</div>
-			</li>
+			</li> --%>
     </ul>
     <div class="btn-toolbar">
      <ul class="nav navbar-nav ml-auto">
