@@ -21,7 +21,7 @@
         <a class="nav-link" href="<c:url value='/'/>">OmegaPro <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="<c:url value='/article/partenaires'/>">Partenaires <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<c:url value='/partenaire/partenaires'/>">Partenaires <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="<c:url value='/'/>">Temoignages <span class="sr-only">(current)</span></a>
