@@ -41,18 +41,19 @@
 	</c:if>
 	
 	<!--  content -->
-	<%-- <div id="catalogue" style="margin: auto; max-width: 80%">
+	<br><br><br><br>
+	<div id="catre" style="margin: auto; max-width: 80%">
 
 		<div class="row">
 			
 			<c:forEach items="${partenaires}" var="item">
-				<div class="card-container" style="width: 29%; margin-right: 1%;">
+				<div class="card-container" style="width: 22%; margin: 1%;">
 					<div class="card">
 						<div class="front">
 							<div class="content">
-								<div class="main" style="max-height: 100%;">
+								<div class="main text-center" style="max-height: 100%;">
 								
-								<img alt="" src="<c:url value="/resources/images/${item.image  }" />" style="width:100%; height: 420px;">
+								<img alt="" src="<c:url value="/resources/images/${item.image  }" />" style="max-width:300px; max-height: 400px;">
 								</div>
 							</div>
 						</div>
@@ -84,15 +85,22 @@
 			</c:forEach>
 
 		</div>
-	</div> --%>
+	</div>
 	
 	<!-- footer -->
 	<jsp:include page='../includes/footer.jsp' />
 	<!-- footer end -->
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
 </body>
 </html>

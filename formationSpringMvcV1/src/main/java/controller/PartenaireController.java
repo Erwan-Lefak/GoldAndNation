@@ -48,7 +48,7 @@ public class PartenaireController {
 	public String getAll(Model model, HttpServletRequest ht) {
 		model.addAttribute("partenaires", repository.findAll());
 
-		return "partenaire/partenaires";
+		return "article/partenaires";
 	}
 
 	
@@ -95,7 +95,7 @@ public class PartenaireController {
 		 * panier.setPrix(); ht.getSession().setAttribute("panier", panier);
 		 */
 		/**/
-		 return "partenaire/partenaires"; }
+		 return "article/partenaires"; }
 		 
 
 	

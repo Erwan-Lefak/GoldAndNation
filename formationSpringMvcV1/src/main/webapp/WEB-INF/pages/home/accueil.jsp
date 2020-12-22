@@ -95,7 +95,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 0px;
     }
     
     .home-bottom-banner {
@@ -279,6 +279,7 @@ margin-bottom: 30px;
 <body>
 
 <header class="header">
+
 	<!-- navbar -->
 	
 	<!-- navbar end -->
@@ -288,6 +289,7 @@ margin-bottom: 30px;
 	<c:if test="${ empty sessionScope.user }">
 		<jsp:include page='../includes/navbar.jsp' />
 	</c:if>
+	
 </header>	
 	
 	<!--  content -->
