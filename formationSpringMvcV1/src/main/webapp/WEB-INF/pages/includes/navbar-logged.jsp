@@ -35,7 +35,7 @@
 		<div class="btn-toolbar">
 			<ul class="nav navbar-nav ml-auto">
 				<li style="margin: 7px 20px 10px 0px;">Bienvenue ${ sessionScope.user.prenom }</li> <!-- Bienvenue ${ sessionScope.user.prenom } -->
-				<li><a class="btn btn-default" href="<c:url value='/'/>">Profil</a></li>
+				<li><a class="btn btn-default" href="<c:url value='/profil/dashboard/'/>">Profil</a></li>
 				<li><a class="btn btn-default" href="<c:url value='/deco/after'/>">Déconnexion</a></li>
 			</ul>
 		</div>

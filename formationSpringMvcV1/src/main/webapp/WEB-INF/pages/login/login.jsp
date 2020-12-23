@@ -14,7 +14,7 @@
 	<jsp:include page='../includes/navbar-login.jsp' />
 	<!-- fin header -->
 	<!-- content -->
-<br><br><br><br><br><br><br>
+<br><br><br>
 	<div class="container">
 		<div class="row">
 			<form class="form-horizontal" style="width: 50%; margin: auto;"

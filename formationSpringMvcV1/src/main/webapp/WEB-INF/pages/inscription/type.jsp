@@ -14,13 +14,15 @@
 </head>
 <body>
 <!-- header -->
-<jsp:include page='../includes/nav-inscription.jsp' />
+<jsp:include page='../includes/navbar-login.jsp' />
 	<!-- fin header -->
+	<br><br><br><br>
 	<div class="container">
 		
 		
-			<div class="alert alert-success" role="alert">Bienvenue dans
-				lespace Gérant</div>
+			<!-- <div class="alert alert-success" role="alert">Bienvenue dans
+				lespace Gérant</div> -->
+				
 			<div class ="jumbotron">
 			<p>Désirez vous vous inscrire entant que particulier ou entant qu'entreprise ?</p>
 			 <div class="form-group">

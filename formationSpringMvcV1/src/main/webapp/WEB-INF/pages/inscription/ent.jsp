@@ -18,7 +18,7 @@
 </head>
 <body>
 	<!-- header -->
-	<jsp:include page='../includes/nav-admin.jsp' />
+	<jsp:include page='../includes/navbar.jsp' />
 	<!-- fin header -->
 	<!-- content -->
 	<h1 class="display-4 text-primary">Inscription</h1>
