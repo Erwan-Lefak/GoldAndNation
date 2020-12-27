@@ -1,15 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 
-<link href='<c:url value="/resources/css/rotating-card.css" />'
+<link href='/projetFinalSpringMVC/resources/css/rotating-card.css'
 	rel="stylesheet" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
 
 <title>Accueil</title>
 </head>
@@ -63,10 +62,10 @@
     .btn-nous-contacter {
     transition: all 0.3s ease;
     color: #fff;
-    border: 2px solid #ff4b68;
+    border: 2px solid #E6BF26;
     border-radius: 3px;
     padding: 10px 30px;
-    background-color: #ff4b68;
+    background-color: #E6BF26;
     min-width: 300px;
 }
     
@@ -75,16 +74,27 @@
     clip:rect(10px,190px,190px,10px);
     }
     
-    .home-banner {
+    @media (min-width: 1400px) {
+    
+    .home-banner  {
+    border-image: url("/projetFinalSpringMVC/resources/images/gold_color.jpg") 2480;
+    border-right: 260px solid ;
+    border-left: 260px solid;
+    }
+    
+    }
+    
+    .home-banner  {
     text-align: center;
     height: 100vh;
-    background-image: url("<c:url value="/resources/images/foodtruck1.jpg" />");
+    background-image: url("/projetFinalSpringMVC/resources/images/logo19.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 0px;
     }
     
     .home-bottom-banner {
@@ -95,7 +105,7 @@
 	.home-banner-mobile {
     text-align: center;
     height: 70vh;
-    background-image: url("<c:url value="/resources/images/foodtruck2.jpg" />");
+    background-image: url("/projetFinalSpringMVC/resources/images/foodtruck2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -114,7 +124,7 @@
 
 .img-item-bloc1 {
     flex: 1;
-    background-image: url("<c:url value="/resources/images/foodtruck3.jpg" />");
+    background-image: url("/projetFinalSpringMVC/resources/images/foodtruck3.jpg");
     background-size: cover;
     background-position: 50% 50%;
     
@@ -162,7 +172,7 @@
 
 .img-item-bloc2 {
     flex: 1;
-    background-image: url("<c:url value="/resources/images/foodtruck4.jpg" />");
+    background-image: url("/projetFinalSpringMVC/resources/images/foodtruck4.jpg");
     background-size: cover;
     background-position: 50% 50%;
 }
@@ -172,12 +182,13 @@
     margin-bottom: 8px;
     font-size: 38px;
     font-weight: bold;
-    color: #fff;
+    color: #000;
+    text-align: bottom;
 }
 
 .home-banner-content p {
     font-size: 22px;
-    color: white;
+    color: black;
     margin-bottom: 16px;
 }
 
@@ -185,13 +196,13 @@
     color: #000;
 }
 .home-bottom-banner h2 {
-    color: #ff4b68;
+    color: #E6BF26;
     font-size: 30px;
     font-weight: bold;
     margin-top: 70px;
 }
 .testimonial {
-    background-color: #ff4b68;
+    background-color: #E6BF26;
     color: #fff;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -199,8 +210,8 @@
 
 .home-btn {
     color: #fff;
-    background-color: #ff4b68;
-    border: 2px solid #ff4b68;
+    background-color: #E6BF26;
+    border: 2px solid #E6BF26;
     border-radius: 3px;
     padding: 6px 16px;
     transition: all 0.3s ease;
@@ -211,7 +222,7 @@
 
 .btn-nous-contacter-reverse {
     transition: all 0.3s ease;
-    color: #ff4b68;
+    color: #E6BF26;
     border: 2px solid #fff;
     border-radius: 3px;
     padding: 10px 30px;
@@ -250,7 +261,7 @@ margin: auto;
 
 .carousel{
 height:350px;
-background-image: url("<c:url value="/resources/images/bck.png" />");
+background-image: url("/projetFinalSpringMVC/resources/images/gold_color3.jpg");
 background-size: cover;
 background-repeat: no-repeat;
 margin-bottom: 30px;
@@ -265,18 +276,96 @@ margin-bottom: 30px;
 
 </style>
 <body>
+
+<header class="header">
+
 	<!-- navbar -->
 	
 	<!-- navbar end -->
-	<c:if test="${ not empty sessionScope.user }">
-		<jsp:include page='../includes/navbar-logged.jsp' />
-	</c:if>
-	<c:if test="${ empty sessionScope.user }">
-		<jsp:include page='../includes/navbar.jsp' />
-	</c:if>
+	
+	
+		
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+	<a class="navbar-brand" href="/projetFinalSpringMVC/article/accueil/" ml-auto><img alt="" src="/projetFinalSpringMVC/resources/images/logo8.png"  style="width: 70px;"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse"
+		data-target="#navbarNav" aria-controls="navbarNav"
+		aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+			
+			
+			<li class="nav-item active">
+        <a class="nav-link" href="/projetFinalSpringMVC/">Accueil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/projetFinalSpringMVC/article/articles/">Service <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/projetFinalSpringMVC/">OmegaPro <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/projetFinalSpringMVC/partenaire/partenaires">Partenaires <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/projetFinalSpringMVC/">Temoignages <span class="sr-only">(current)</span></a>
+      </li>
+		</ul>
+      
+      
+    </ul>
+    <div class="btn-toolbar">
+     <ul class="nav navbar-nav ml-auto">
+        <li><a class="btn btn-default" href="/projetFinalSpringMVC/inscription/pre">Inscription</a></li>
+        <li><a class="btn btn-default" href="/projetFinalSpringMVC/login/loginForm">Connexion</a></li>
+      </ul>
+      </div>
+  </div>
+</nav>
+	
+	
+</header>	
 	
 	<!--  content -->
+    <div class="site-content">
+<div id="home-banner" class="home-banner">
+  <div  class="home-banner-content">
+    <h1>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      BIENVENUE 
+    </h1>
+    
+    <br><br>
+    <div class="col-xs-12 text-center list-inline hidden-xs">
+      <li><a class="home-btn" href="/projetFinalSpringMVC/inscription/pre">Inscrivez-vous</a></li>
+    </div>
+  <br><br><br><br>
+  </div>
+</div>
+<div class="home-bottom-banner">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-xs-12 h1-orange text-center">
+        <br>
+        <br>
+        <h2>GAGNEZ DU TEMPS POUR CE QUI COMPTE <br> <b> <span class="home-black">AVEC NOTRE OUTILS DE GESTION DU RESEAUX</span></b></h2>
+        <p>
+          Nous travaillons chaque jour pour offrir le meilleur système pour votre réseaux. <br>
+          Comblez leurs attentes grâce à la performance de notre service de restauration par l'intermédiaire de notre food trucks .
+        </p>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
 
+<br>
+<br>
+<br>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -284,20 +373,20 @@ margin-bottom: 30px;
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner" style=" width: 500px;">
-    <div class="carousel-item active" style=" margin-top: 0px; margin-left: 30px">
-<A href="<c:url value='/static/carto'/>"><img class="mx-auto" width="450px" src="<c:url value="/resources/images/carte.png" />" alt="First slide"></A>    
-	<div style="width: 450px;"><h3 >La Localisation</h3></div>
+    <div class="carousel-item active" style=" margin-top: 0px; margin-left: px">
+<A href="/projetFinalSpringMVC/static/conseil"><img class="mx-auto" width="100%" src="/projetFinalSpringMVC/resources/images/sam1.png" alt="First slide"></A>
+    <h3>Samuel</h3>
 	</div>
-    <div class="carousel-item" style=" margin-top: 60px; ">
-<A href="#"><img class="mx-auto" width="100%" src="<c:url value="/resources/images/Sale.png" />" alt="Second slide"></A>
-    <h3 style="">Les Promotions</h3>
+    <div class="carousel-item" style=" margin-top: 0px; ">
+<A href="#"><img class="mx-auto" width="100%" src="/projetFinalSpringMVC/resources/images/sam1.png" alt="Second slide"></A>
+    <h3 style="">Erwan</h3>
     </div>
     <div class="carousel-item" style=" margin-top: 0px;">
-<A href="<c:url value='/article/conseil'/>"><img class="mx-auto" width="100%" src="<c:url value="/resources/images/conseil.png" />" alt="First slide"></A>
-    <h3>Les Conseils</h3>
+<A href="/projetFinalSpringMVC/static/conseil"><img class="mx-auto" width="100%" src="/projetFinalSpringMVC/resources/images/sam1.png" alt="First slide"></A>
+    <h3>Stella</h3>
     </div>
-    <div class="carousel-item" style=" margin-top: 60px;">
-<A href="<c:url value='/article/bestOf'/>"><img class="mx-auto p-5" width="100%" src="<c:url value="/resources/images/top_food.png" />" alt="First slide"></A>
+    <div class="carousel-item" style=" margin-top: 0px;">
+<A href="/projetFinalSpringMVC/static/bestOf"><img class="mx-auto" width="100%" src="/projetFinalSpringMVC/resources/images/sam1.png" alt="First slide"></A>
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -310,44 +399,10 @@ margin-bottom: 30px;
   </a>
 </div>
 
-    <div class="site-content">
-      
-<div id="home-banner" class="home-banner" >
-  <div  class="home-banner-content">
-    <h1>
-      FAITES VENIR LE PARIS TRUCK CHEZ VOUS OU SUR VOTRE LIEU DE TRAVAIL
-    </h1>
-    <p>
-      Faites de votre <b>repas</b> un moment de dÃ©couverte et de plaisir <br>grÃ¢ce Ã  notre foodtruck.
-    </p>
-    <br><br>
-    <div class="col-xs-12 text-center list-inline hidden-xs">
-      <li><a class="home-btn" href="<c:url value='/inscription/inscriptionForm'/>">Inscrivez-vous</a></li>
-    </div>
-  <br><br><br><br>
-  </div>
-</div>
-<div class="home-bottom-banner">
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-xs-12 h1-orange text-center">
-        <br>
-        <br>
-        <h2>GAGNEZ DU TEMPS POUR CE QUI COMPTE <br> <b> <span class="home-black">AVEC NOTRE SITE DE COMMANDE EN LIGNE</span></b></h2>
-        <p>
-          Nous travaillons chaque jour pour offrir Ã  vos collaborateurs les meilleurs repas. <br>
-          Comblez leurs attentes grÃ¢ce Ã  la performance de notre service de restauration par l'intermÃ©diaire de notre food trucks .
-        </p>
-        <br>
-        <br>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="home-banner-mobile">
+<!-- <div class="home-banner-mobile"> -->
 
-</div>
+<!-- </div> -->
 
 <div class="home-bottom-banner">
   <div class="container">
@@ -357,7 +412,7 @@ margin-bottom: 30px;
         <br>
         <h2>NOS ENGAGEMENTS <br> <b> <span class="home-black">POUR VOUS</span></b></h2>
         <p>
-          Proposer un mode de restauration rapide, qualitative, variÃ©e <br>
+          Proposer un mode de restauration rapide, qualitative, variée <br>
           pour les particuliers et les entreprises.
         </p>
         <br>
@@ -372,16 +427,16 @@ margin-bottom: 30px;
   </div>
   <div class="text-itemhome">
     <div class="special icono-home text-center">
-      <img src="<c:url value="/resources/images/logo1.png" />" alt="Plate"> <br>
-      <c>De 50 Ã  500+ repas par jour sur site, selon vos besoins<br><br></c>
-      <img src="<c:url value="/resources/images/logo2.png" />" alt="Euro"><br>
-      <c>Un service gratuit pour les entreprises, sans coÃ»t de structure ni coÃ»t de gestion<br><br></c>
-      <img src="<c:url value="/resources/images/logo3.png" />" alt="Time"><br>
+      <img src="/projetFinalSpringMVC/resources/images/logo1.png" alt="Plate"> <br>
+      <c>De 50 à 500+ repas par jour sur site, selon vos besoins<br><br></c>
+      <img src="/projetFinalSpringMVC/resources/images/logo2.png" alt="Euro"><br>
+      <c>Un service gratuit pour les entreprises, sans coût de structure ni coût de gestion<br><br></c>
+      <img src="/projetFinalSpringMVC/resources/images/logo3.png" alt="Time"><br>
       <c>Une mise en place simple et rapide</c>
       <br>
       <br>
       <br>
-      <a class="btn-nous-contacter" href="<c:url value='/article/articles'/>">Catalogue</a>
+      <a class="btn-nous-contacter" href="/projetFinalSpringMVC/article/articles">Catalogue</a>
       <br><br>
     </div>
   </div>
@@ -392,10 +447,10 @@ margin-bottom: 30px;
       <div class="col-xs-12 h1-orange text-center">
         <br>
         <br>
-        <h2>UNE MEILLEURE ALTERNATIVE<br> <b> <span class="home-black">POUR VOTRE ENTREPRISE</span></b></h2>
+        <h2>UNE MEILLEURE MANIERE DE CHANGER DES VIE<br> <b> <!-- <span class="home-black">POUR VOTRE ENTREPRISE</span></b></h2> -->
         <p>
-          Parce que votre satisfaction est notre prioritÃ©, nous mettons <br>
-          un point d'honneur Ã  ce que notre service corresponde Ã  vos critÃ¨res de sÃ©lection.
+          Parce que votre satisfaction est notre priorité, nous mettons <br>
+          un point d'honneur à ce que notre service corresponde à vos critères de sélection.
         </p>
         <br>
         <br>
@@ -407,59 +462,42 @@ margin-bottom: 30px;
   <div class="text-itemhome h2-bold">
     <div class="special icono-home text-center">
       <div class="flip-image">
-        <img src="<c:url value="/resources/images/logo4.png" />" alt="Clean">
+        <img src="/projetFinalSpringMVC/resources/images/logo4.png" alt="Clean">
       </div>
-      <c>Nos restaurateurs partenaires respectent les normes sanitaires en vigueur (HACCP ou Ã©quivalents)<br><br></c>
-      <img src="<c:url value="/resources/images/logo5.png" />" alt="Calendar">
+      <c>Nos restaurateurs partenaires respectent les normes sanitaires en vigueur (HACCP ou équivalents)<br><br></c>
+      <img src="/projetFinalSpringMVC/resources/images/logo5.png" alt="Calendar">
       <br>
-      <c>Chaque jour une cuisine diffÃ©rente, faite maison.<br>Mangez Ã©quilibrÃ© au bureau. <br><br></c>
-      <img src="<c:url value="/resources/images/logo6.png" />" alt="Quality">
+      <c>Chaque jour une cuisine différente, faite maison.<br>Mangez équilibré au bureau. <br><br></c>
+      <img src="/projetFinalSpringMVC/resources/images/logo6.png" alt="Quality">
       <br>
-      <c>Retrouvez les saveurs et les goÃ»ts de produits frais, issus de circuits courts.</p>
+      <c>Retrouvez les saveurs et les goûts de produits frais, issus de circuits courts.</p>
       <br>
       <br>
       <br>
-      <a class="btn-nous-contacter" href="<c:url value='/article/articles'/>">Catalogue</a>
+      <a class="btn-nous-contacter" href="/projetFinalSpringMVC/article/articles">Catalogue</a>
       <br><br>
     </div>
   </div>
   <div class="img-item-bloc2">
   </div>
 </div>
-<div class="testimonial">
-  <div class="container text-center">
-    <div class="row">
-      <div class="col-xs-12">
-        <h2>Ils en parlent mieux que nous.</h2><br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-1PRESSEPRESSE2 col-sm-4 padded-top-bottom">
-        <img class="img-circle" src="<c:url value="/resources/images/prf3.jpg" />" alt="Id 1"><br><br>
-        <b>Pascal - Safran - Paris</b><br><br>
-        <p>"Depuis que mon entreprise accueille Paris Truck diffÃ©rents tous les jours, nous profitons dâ€™une solution de restauration en phase avec nos attentes."</p>
-      
-      </div>
-      <div class="col-xs-12 col-sm-4 padded-top-bottom">
-        <img class="img-circle" src="<c:url value="/resources/images/prf1.jpg" />" alt="Id 2"><br><br>
-        	<b>Monica - Ecole Nationale SupÃ©rieur D'architecture - Paris</b><br><br>
-        <p>"GrÃ¢ce Ã  Paris Truck Trucks je ne perds plus de temps Ã  aller chercher quelque chose Ã  manger le midi. Je peux passer plus de temps en compagnie des Ã©lÃ¨ves et jâ€™ai mÃªme 10 minutes pour me dÃ©tendre avant dâ€™attaquer lâ€™aprÃ¨s-midi"</p>
-      </div>
-      <div class="col-xs-12 col-sm-4 padded-top-bottom">
-        <img class="img-circle" src="<c:url value="/resources/images/prf2.jpg" />" alt="Id 3"><br><br>
-        <b>Roger - Paris</b><br><br>
-        <p>" Paris Truck me permet d'avoir un repas livrÃ© rapidement et bon !"</p>
-      </div>
-    </div>
-    <br>
-    <br>
-  </div>
-</div>
+
+
+
     </div>
     
 
 	<!-- footer -->
-	<jsp:include page='../includes/footer.jsp' />
+	
+
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright</div>
+  <!-- Copyright -->
+
+</footer>
+
 	<!-- footer end -->
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
