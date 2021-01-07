@@ -75,20 +75,10 @@
     clip:rect(10px,190px,190px,10px);
     }
     
-    @media (min-width: 1400px) {
-    
-    .home-banner  {
-    border-image: url("<c:url value="/resources/images/gold_color.jpg" />") 2480;
-    border-right: 260px solid ;
-    border-left: 260px solid;
-    }
-    
-    }
-    
     .home-banner  {
     text-align: center;
     height: 100vh;
-    background-image: url("<c:url value="/resources/images/logo18.jpg" />");
+    background-image: url("<c:url value="/resources/images/logo19.jpg" />");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -106,7 +96,7 @@
 	.home-banner-mobile {
     text-align: center;
     height: 70vh;
-    background-image: url("<c:url value="/resources/images/foodtruck2.jpg" />");
+    background-image: url("<c:url value="/resources/images/Outils.jpg" />");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -125,7 +115,7 @@
 
 .img-item-bloc1 {
     flex: 1;
-    background-image: url("<c:url value="/resources/images/foodtruck3.jpg" />");
+    background-image: url("<c:url value="/resources/images/Outils.jpg" />");
     background-size: cover;
     background-position: 50% 50%;
     
@@ -262,7 +252,7 @@ margin: auto;
 
 .carousel{
 height:350px;
-background-image: url("<c:url value="/resources/images/gold_color3.jpg" />");
+background-image: url("<c:url value="/resources/images/gray_color.jpg" />");
 background-size: cover;
 background-repeat: no-repeat;
 margin-bottom: 30px;
@@ -272,6 +262,173 @@ margin-bottom: 30px;
 }
 .col-xs-12 {
     width: 100%;
+}
+
+#footer {
+    background: #333;
+    padding: 30px 0;
+    color: #cccccc;
+    width: 100%;
+}
+
+#footer a {
+    color: #cccccc;
+    font-size: 50px;
+    letter-spacing: 2px;
+    transition: color 0.5s ease;
+    text-decoration: none;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: inherit;
+    line-height: 1;
+    font-family: FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-zoom:before {
+    background-image: url("<c:url value="/resources/images/gray_color.jpg" />");
+    background-repeat: no-repeat;
+    width: 100px;
+  	height: 103px;
+  	padding: 0;
+}
+
+.fa-facebook-f:before, .fa-facebook:before {
+    background-image: url("<c:url value="/resources/images/gray_color.jpg" />");
+    
+}
+
+.fa-instagram:before {
+    background-image: url("<c:url value="/resources/images/gray_color.jpg" />");
+}
+
+.fa-youtube:before {
+    background-image: url("<c:url value="/resources/images/gray_color.jpg" />");
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+.margin-bottom-50 {
+    margin-bottom: 50px;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+div {
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 12.5px;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: left;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+footer p {
+    margin-top: 17px;
+    font-size: 16px;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#sitemap a {
+    color: #cccccc;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: color 0.5s ease;
+    text-decoration: none;
+}
+
+h4 {
+    color: #E6BF26;
+}
+
+#footer .email {
+    font-size: 16px;
+}
+
+
+@media screen and (max-width: 768px){
+#footer .email {
+    font-size: 14px !important;
+}
+}
+
+@media (min-width: 768px){
+.col-sm-offset-2 {
+    margin-left: 16.6666666667%;
+}
+}
+
+
+@media (min-width: 1200px){
+.container {
+    width: 1170px;
+}
 }
 
 
@@ -297,8 +454,8 @@ margin-bottom: 30px;
 <div id="home-banner" class="home-banner">
   <div  class="home-banner-content">
     <h1>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      BIENVENUE 
+    <br><br><br><br><br><br><br><br><br><br><br>
+      BIENVENUE
     </h1>
     
     <br><br>
@@ -316,11 +473,12 @@ margin-bottom: 30px;
         <br>
         <h2>GAGNEZ DU TEMPS POUR CE QUI COMPTE <br> <b> <span class="home-black">AVEC NOTRE OUTILS DE GESTION DU RESEAUX</span></b></h2>
         <p>
-          Nous travaillons chaque jour pour offrir le meilleur système pour votre réseaux. <br>
-          Comblez leurs attentes grâce à la performance de notre service de restauration par l'intermédiaire de notre food trucks .
+
+          Vous vous démenez chaque jour et pourtant rien ne change, <br> Vous savez que vous méritez mieux vous n’avez qu’une seule envie c’est d’être enfin libre ! <br>
+          
+          Nous travaillons chaque jour pour vous offrir à vous et vos partenaires le meilleur système de gestion de réseau
+          
         </p>
-        <br>
-        <br>
       </div>
     </div>
   </div>
@@ -371,13 +529,9 @@ margin-bottom: 30px;
   <div class="container">
     <div class="row">
       <div class="col-xs-12 h1-orange text-center">
-        <br>
-        <br>
-        <h2>NOS ENGAGEMENTS <br> <b> <span class="home-black">POUR VOUS</span></b></h2>
-        <p>
-          Proposer un mode de restauration rapide, qualitative, variée <br>
-          pour les particuliers et les entreprises.
-        </p>
+
+        <h2>NOTRE ENGAGEMENT <br> <b> <span class="home-black">POUR VOUS</span></b></h2>
+        <p>Vous aider à atteindre vos objectifs financiers à travers le marketing relationnel qui est nous vous l’assurons la meilleure industrie au monde</p>
         <br>
         <br>
       </div>
@@ -385,38 +539,19 @@ margin-bottom: 30px;
   </div>
 </div>
 
-<div class="flexbox">
-  <div class="img-item-bloc1">  
+
+  <div class="home-banner-mobile">  
   </div>
-  <div class="text-itemhome">
-    <div class="special icono-home text-center">
-      <img src="<c:url value="/resources/images/logo1.png" />" alt="Plate"> <br>
-      <c>De 50 à 500+ repas par jour sur site, selon vos besoins<br><br></c>
-      <img src="<c:url value="/resources/images/logo2.png" />" alt="Euro"><br>
-      <c>Un service gratuit pour les entreprises, sans coût de structure ni coût de gestion<br><br></c>
-      <img src="<c:url value="/resources/images/logo3.png" />" alt="Time"><br>
-      <c>Une mise en place simple et rapide</c>
-      <br>
-      <br>
-      <br>
-      <a class="btn-nous-contacter" href="<c:url value='/article/articles'/>">Catalogue</a>
-      <br><br>
-    </div>
-  </div>
-</div>
+  
 <div class="home-bottom-banner">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 h1-orange text-center">
         <br>
         <br>
-        <h2>UNE MEILLEURE MANIERE DE CHANGER DES VIE<br> <b> <!-- <span class="home-black">POUR VOTRE ENTREPRISE</span></b></h2> -->
-        <p>
-          Parce que votre satisfaction est notre priorité, nous mettons <br>
-          un point d'honneur à ce que notre service corresponde à vos critères de sélection.
-        </p>
-        <br>
-        <br>
+        <h2>UNE MEILLEURE ALTERNATIVE <br><span class="home-black">POUR VOTRE BUSINESS</span><br></h2> <!-- <span class="home-black">POUR VOTRE ENTREPRISE</span></b></h2> -->
+			<p>Vous êtes volontaire, <br> Vous désirez apprendre, <br> Vous avez soif de succès</p>
+        <h2><span class="home-black">BIENVENUE DANS LE GROUPE </span> <br> GOLD&NATION <br></h2>
       </div>
     </div>
   </div>
@@ -425,25 +560,33 @@ margin-bottom: 30px;
   <div class="text-itemhome h2-bold">
     <div class="special icono-home text-center">
       <div class="flip-image">
-        <img src="<c:url value="/resources/images/logo4.png" />" alt="Clean">
+        <img src="<c:url value="/resources/images/logo4.PNG" />" alt="Clean">
       </div>
-      <c>Nos restaurateurs partenaires respectent les normes sanitaires en vigueur (HACCP ou équivalents)<br><br></c>
+      <c>Nos sociétés sont régulés <br><br></c>
       <img src="<c:url value="/resources/images/logo5.png" />" alt="Calendar">
       <br>
-      <c>Chaque jour une cuisine différente, faite maison.<br>Mangez équilibré au bureau. <br><br></c>
+      <c>Chaque jour une formation différente.<br>Faites votre planning et apprenez depuis chez vous<br><br></c>
       <img src="<c:url value="/resources/images/logo6.png" />" alt="Quality">
       <br>
-      <c>Retrouvez les saveurs et les goûts de produits frais, issus de circuits courts.</p>
-      <br>
-      <br>
-      <br>
-      <a class="btn-nous-contacter" href="<c:url value='/article/articles'/>">Catalogue</a>
-      <br><br>
+      <c>Atteignez les grades et obtenez les récompenses</p>
+ 
+
     </div>
   </div>
-  <div class="img-item-bloc2">
+  <div class="text-itemhome">
+    <div class="special icono-home text-center">
+      <img src="<c:url value="/resources/images/logo1.png" />" alt="Plate"> <br>
+      <c>Développez votre réseau, selon vos besoins<br><br></c>
+      <img src="<c:url value="/resources/images/logo2.png" />" alt="Euro"><br>
+      <c>Un service gratuit, sans coût de structure ni coût de gestion<br><br></c>
+      <img src="<c:url value="/resources/images/logo3.png" />" alt="Time"><br>
+      <c>Un fonctionnement simple et rapide</c>
+
+    </div>
   </div>
 </div>
+
+
 
 
 <%-- 
@@ -481,6 +624,67 @@ margin-bottom: 30px;
 --%>
     </div>
     
+    <div id="footer" class="text-center">
+  <div class="container margin-bottom-50">
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="list-inline">
+          <li>
+            <a class="fa fa-facebook"  href="https://www.facebook.com/GoldNation-103605701672783/"  ><img src="<c:url value="/resources/images/logo-zoom.jpg" />" > </a>
+          </li>
+          <li>
+            <a class="fa fa-instagram"  href="https://www.instagram.com/gold_and_nation/?hl=fr"></a>
+          </li>
+          <li>
+            <a class="fa fa-zoom"  href="https://us02web.zoom.us/j/81890004821?pwd=THRwRlJjcm5hL3FldTBQZVlxMjRuQT09"></a>
+          </li>
+          <li>
+            <a class="fa fa-youtube"  href=""></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container margin-bottom-50">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <a href="mailto:goldandnation@gmail.com?subject=contact" class="email">goldandnation@gmail.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div id="sitemap">
+        <div class="col-xs-12 col-sm-4">
+          <h4>Plan du site</h4>
+          <p>
+            <a href="<c:url value='/'/>">Accueil</a>
+            <br><a href="<c:url value='/partenaire/partenaires'/>">Partenaire</a>
+            <br><a href="/blogs">Blog</a>
+            <br><a href="/">Temoignages</a>
+            <br><a href="/food-truck">Inscription</a>
+            <br><a href="/team">Connexion</a>
+            <br><a href="/cgu">CGU</a>
+            <br><a href="/mentionslegales">Mentions Légales</a>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <h4>Société Partenaire</h4>
+            <p>
+              <a href="https://omegapro.world/">OmegaPro</a>
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <p>
+            Gold&Nation propose des solutions de gestion de réseau pour les particuliers et les associations.
+            <br><br>
+            Notre mission ? Vous faire gagner du temps avec un système performant !
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 	<!-- footer -->
 	<jsp:include page='../includes/footer.jsp' />

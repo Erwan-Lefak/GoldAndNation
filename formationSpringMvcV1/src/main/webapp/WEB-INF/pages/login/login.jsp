@@ -11,7 +11,7 @@
 </head>
 <body>
 	<!-- header -->
-	<jsp:include page='../includes/navbar-login.jsp' />
+	<jsp:include page='../includes/navbar.jsp' />
 	<!-- fin header -->
 	<!-- content -->
 <br><br><br>
