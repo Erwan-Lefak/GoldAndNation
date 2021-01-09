@@ -46,7 +46,7 @@ public class LoginController {
 			ht.getSession().setAttribute("user", user);
 			ht.getSession().setAttribute("panier", commande);
 			}
-			return "redirect:../article/articles";
+			return "redirect:../article/accueil";
 		} else {
 			return "login/login";
 		}

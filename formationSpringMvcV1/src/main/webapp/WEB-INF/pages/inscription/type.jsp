@@ -24,13 +24,13 @@
 				lespace Gérant</div> -->
 				
 			<div class ="jumbotron">
-			<p>Désirez vous vous inscrire entant que particulier ou entant qu'entreprise ?</p>
+			<p>Bienvenue dans l'espace membre Gold&Nation</p>
 			 <div class="form-group">
 			 
 			<form:form class="form-horizontal" action="" method="post"
 				modelAttribute="user" style="width: 50%; margin: auto;">
-				<button type="submit" name="ent" value="ent" class="btn btn-primary" style="margin-right:15px;">Entreprise</button>
-				<button type="submit" name="part" value="part" class="btn btn-secondary" >Particulier</button>
+				<!-- <button type="submit" name="ent" value="ent" class="btn btn-primary" style="margin-right:15px;">Entreprise</button> -->
+				<button type="submit" name="part" value="part" class="btn btn-primary" >S'inscrire</button>
 			</form:form>
 			</div>
 			</div>

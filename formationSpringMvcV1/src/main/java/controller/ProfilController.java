@@ -33,18 +33,6 @@ public class ProfilController {
 	@Autowired
 	private ProfilRepository repository;
 
-	
-	/*
-	 * @GetMapping("/accueil") public String getByBestOf(Model model,
-	 * HttpServletRequest ht) {
-	 * 
-	 * if (ht.getSession().getAttribute("panier") == null) { Commande commande = new
-	 * Commande(); ht.getSession().setAttribute("panier", commande); }
-	 * 
-	 * model.addAttribute("partenaires",repository.findAll()); return
-	 * "home/accueil"; }
-	 */
-	
 	@GetMapping("/dashboard")
 	public String getAll(Model model, HttpServletRequest ht) {
 		model.addAttribute("partenaires", repository.findAll());
@@ -52,133 +40,110 @@ public class ProfilController {
 		return "article/dashboard";
 	}
 
-	
-	 @PostMapping("/dashboard") 
-	 public String getAll3(Model model, HttpServletRequest ht) {
-	  
-	 model.addAttribute("dashboard", repository.findAll());
-	 
-		/* model.addAttribute("categories", categRepository.findAll()); */
+	@PostMapping("/dashboard")
+	public String getAll1(Model model, HttpServletRequest ht) {
 
-		
-		/*
-		 * Commande panier = (Commande) ht.getSession().getAttribute("panier");
-		 * 
-		 * if (ht.getParameter("partenaireId") != null) { int articleId =
-		 * Integer.parseInt(ht.getParameter("partenaireId")); boolean ligneAlreadyExists
-		 * = false; for (LigneCommande ligneCommande : panier.getLignesCommande()) { if
-		 * (ligneCommande.getPartenaire().getId() == articleId) { ligneAlreadyExists =
-		 * true; ligneCommande.setQuantite(ligneCommande.getQuantite() + 1); } } if
-		 * (!ligneAlreadyExists) panier.addLigneCommande(new LigneCommande(panier,
-		 * repository.findById(articleId).get(), 1)); }
-		 * 
-		 * if (ht.getParameter("supp") != null) { int ligneId =
-		 * Integer.parseInt(ht.getParameter("supp")); for (LigneCommande ligneCommande :
-		 * panier.getLignesCommande()) { if (ligneCommande.getPartenaire().getId() ==
-		 * ligneId) { panier.getLignesCommande().remove(ligneCommande); break; } } }
-		 * 
-		 * if (ht.getParameter("plus") != null) { int ligneId =
-		 * Integer.parseInt(ht.getParameter("plus")); for (LigneCommande ligneCommande :
-		 * panier.getLignesCommande()) { if (ligneCommande.getPartenaire().getId() ==
-		 * ligneId) { ligneCommande.setQuantite(ligneCommande.getQuantite() + 1); ;
-		 * break; } } }
-		 * 
-		 * if (ht.getParameter("moins") != null) { int ligneId =
-		 * Integer.parseInt(ht.getParameter("moins")); for (LigneCommande ligneCommande
-		 * : panier.getLignesCommande()) { if (ligneCommande.getPartenaire().getId() ==
-		 * ligneId) { ligneCommande.setQuantite(ligneCommande.getQuantite() - 1); if
-		 * (ligneCommande.getQuantite() == 0)
-		 * panier.getLignesCommande().remove(ligneCommande); break; } } }
-		 * 
-		 * if (ht.getParameter("passerCommande") != null) { // do whatever you want my
-		 * dear friend Ayoub }
-		 * 
-		 * panier.setPrix(); ht.getSession().setAttribute("panier", panier);
-		 */
-		/**/
-		 return "article/dashboard"; }
-		 
-
+		model.addAttribute("dashboard", repository.findAll());
+		return "article/dashboard";
+	}
 	
-	 @GetMapping("/categorie/{id}") public String getByCateg(Model model,
-	 HttpServletRequest ht, @PathVariable(name = "id") int id) {
-	 /*
-	 * model.addAttribute("categories", categRepository.findAll());
-	 * 
-	 * Categorie catchoisie = categRepository.findById(id).get();
-	 * 
-	 * model.addAttribute("heure", LocalTime.now());
-	 * 
-	 * if (Time.valueOf(LocalTime.now()).before(catchoisie.getDebut()) ||
-	 * Time.valueOf(LocalTime.now()).after(catchoisie.getFin())) {
-	 * 
-	 * return "article/cestpaslheure"; }
-	 * 
-	 * List<Partenaire> list = repository.findAllByCategories_id(id);
-	 * model.addAttribute("partenaires", list);
-	 * 
-	 **/ return "partenaire/partenaires"; }
-	  
-	 @PostMapping("/categorie/{id}") public String getByCateg1(Model model,
-	 HttpServletRequest ht, @PathVariable(name = "id") int id) {
-	/*
-	 * List<Partenaire> list = repository.findAllByCategories_id(id);
-	 * model.addAttribute("partenaires", list); model.addAttribute("categories",
-	 * categRepository.findAll());
-	 * 
-	 * Commande panier = (Commande) ht.getSession().getAttribute("panier");
-	 * 
-	 * if (ht.getParameter("articleId") != null) { int articleId =
-	 * Integer.parseInt(ht.getParameter("articleId")); boolean ligneAlreadyExists =
-	 * false; for (LigneCommande ligneCommande : panier.getLignesCommande()) { if
-	 * (ligneCommande.getPartenaire().getId() == articleId) { ligneAlreadyExists =
-	 * true; ligneCommande.setQuantite(ligneCommande.getQuantite() + 1); } } if
-	 * (!ligneAlreadyExists) panier.addLigneCommande(new LigneCommande(panier,
-	 * repository.findById(articleId).get(), 1)); }
-	 * 
-	 * if (ht.getParameter("supp") != null) { int ligneId =
-	 * Integer.parseInt(ht.getParameter("supp")); for (LigneCommande ligneCommande :
-	 * panier.getLignesCommande()) { if (ligneCommande.getPartenaire().getId() ==
-	 * ligneId) { panier.getLignesCommande().remove(ligneCommande); break; } } }
-	 * 
-	 * if (ht.getParameter("plus") != null) { int ligneId =
-	 * Integer.parseInt(ht.getParameter("plus")); for (LigneCommande ligneCommande :
-	 * panier.getLignesCommande()) { if (ligneCommande.getPartenaire().getId() ==
-	 * ligneId) { ligneCommande.setQuantite(ligneCommande.getQuantite() + 1); ;
-	 * break; } } }
-	 * 
-	 * if (ht.getParameter("moins") != null) { int ligneId =
-	 * Integer.parseInt(ht.getParameter("moins")); for (LigneCommande ligneCommande
-	 * : panier.getLignesCommande()) { if (ligneCommande.getPartenaire().getId() ==
-	 * ligneId) { ligneCommande.setQuantite(ligneCommande.getQuantite() - 1); if
-	 * (ligneCommande.getQuantite() == 0)
-	 * panier.getLignesCommande().remove(ligneCommande); break; } } }
-	 * 
-	 * if (ht.getParameter("passerCommande") != null) { // do whatever you want my
-	 * dear friend Ayoub }
-	 * 
-	 * panier.setPrix(); ht.getSession().setAttribute("panier", panier);
-	 **/ 
-	 return "profil/dashboard"; }
-	 
+	@GetMapping("/planning")
+	public String getAll2(Model model, HttpServletRequest ht) {
+		model.addAttribute("partenaires", repository.findAll());
+
+		return "article/planning";
+	}
+
+	@PostMapping("/planning")
+	public String getAll3(Model model, HttpServletRequest ht) {
+
+		model.addAttribute("dashboard", repository.findAll());
+		return "article/planning";
+	}
+	
+	@GetMapping("/liste")
+	public String getAll4(Model model, HttpServletRequest ht) {
+		model.addAttribute("partenaires", repository.findAll());
+
+		return "article/liste";
+	}
+
+	@PostMapping("/liste")
+	public String getAll5(Model model, HttpServletRequest ht) {
+
+		model.addAttribute("liste", repository.findAll());
+		return "article/liste";
+	}
+	
+	@GetMapping("/grade")
+	public String getAll6(Model model, HttpServletRequest ht) {
+		model.addAttribute("partenaires", repository.findAll());
+
+		return "article/grade";
+	}
+
+	@PostMapping("/grade")
+	public String getAll7(Model model, HttpServletRequest ht) {
+
+		model.addAttribute("liste", repository.findAll());
+		return "article/grade";
+	}
+	
+	@GetMapping("/support")
+	public String getAll8(Model model, HttpServletRequest ht) {
+		model.addAttribute("partenaires", repository.findAll());
+
+		return "article/support";
+	}
+
+	@PostMapping("/support")
+	public String getAll9(Model model, HttpServletRequest ht) {
+
+		model.addAttribute("liste", repository.findAll());
+		return "article/support";
+	}
+	
+	@GetMapping("/documentation")
+	public String getAll10(Model model, HttpServletRequest ht) {
+		model.addAttribute("partenaires", repository.findAll());
+
+		return "article/documentation";
+	}
+
+	@PostMapping("/documentation")
+	public String getAll11(Model model, HttpServletRequest ht) {
+
+		model.addAttribute("liste", repository.findAll());
+		return "article/documentation";
+	}
+
+	@GetMapping("/categorie/{id}")
+	public String getByCateg(Model model, HttpServletRequest ht, @PathVariable(name = "id") int id) {
+		return "partenaire/partenaires";
+	}
+	
+	
+
+	@PostMapping("/categorie/{id}")
+	public String getByCateg1(Model model, HttpServletRequest ht, @PathVariable(name = "id") int id) {
+		return "profil/dashboard";
+	}
 
 	@RequestMapping("/deco")
 	public String afterSucces(Model model, HttpServletRequest ht) {
 		return "redirect:../deco/after";
 	}
-	
+
 	@RequestMapping("/conseil")
 	public String conseil() {
-		return"static/conseil";
+		return "static/conseil";
 	}
-	
+
 	@RequestMapping("/test")
-	public String test (Model model) {
-		
-		
+	public String test(Model model) {
+
 		return "profil/test";
 	}
-	
 
 	private ArrayList<Partenaire> getNotAvailable(ArrayList<Partenaire> list1, ArrayList<Partenaire> list2) {
 

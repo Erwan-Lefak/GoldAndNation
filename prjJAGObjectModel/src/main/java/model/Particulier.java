@@ -15,6 +15,12 @@ public class Particulier extends Utilisateur implements Cloneable
 	@Column(name="Prenom",nullable=false,length=50)
 	private String prenom;
 	
+	@Column(name="Parrain",nullable=false,length=50)
+	private String parrain;
+	
+	@Embedded
+	private Objectif obj;
+	
 
 	public Particulier()
 	{
@@ -26,6 +32,22 @@ public class Particulier extends Utilisateur implements Cloneable
 		super();
 		this.nom = nom;
 		this.prenom = prenom;
+	}
+
+	public Particulier(String nom, String prenom, String parrain, Objectif obj) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.parrain = parrain;
+		this.obj = obj;
+	}
+	
+	public Objectif getObjectif() {
+		return obj;
+	}
+
+	public void setObjectif(Objectif obj) {
+		this.obj = obj;
 	}
 
 	public String getNom() {
@@ -45,6 +67,14 @@ public class Particulier extends Utilisateur implements Cloneable
 	}
 	
 	
+	public String getParrain() {
+		return parrain;
+	}
+
+	public void setParrain(String parrain) {
+		this.parrain = parrain;
+	}
+
 	public Object clone()
 	{
 		Object obj = null;
@@ -70,6 +100,8 @@ public class Particulier extends Utilisateur implements Cloneable
 		builder.append(nom);
 		builder.append(", prenom=");
 		builder.append(prenom);
+		builder.append(", parrain=");
+		builder.append(parrain);
 		builder.append(", getAdresse()=");
 		builder.append(getAdresse());
 		builder.append(", getEmail()=");
@@ -78,6 +110,8 @@ public class Particulier extends Utilisateur implements Cloneable
 		builder.append(getPassword());
 		builder.append(", getRole()=");
 		builder.append(getRole());
+		builder.append(", getObjectif()=");
+		builder.append(getObjectif());
 		builder.append("]");
 		return builder.toString();
 	}

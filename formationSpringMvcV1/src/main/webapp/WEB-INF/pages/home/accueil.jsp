@@ -539,8 +539,7 @@ h4 {
   </div>
 </div>
 
-
-  <div class="home-banner-mobile">  
+<img src="<c:url value="/resources/images/Outils.jpg" />" width="100%" height ="100%" alt="G&N">
   </div>
   
 <div class="home-bottom-banner">
@@ -551,7 +550,7 @@ h4 {
         <br>
         <h2>UNE MEILLEURE ALTERNATIVE <br><span class="home-black">POUR VOTRE BUSINESS</span><br></h2> <!-- <span class="home-black">POUR VOTRE ENTREPRISE</span></b></h2> -->
 			<p>Vous êtes volontaire, <br> Vous désirez apprendre, <br> Vous avez soif de succès</p>
-        <h2><span class="home-black">BIENVENUE DANS LE GROUPE </span> <br> GOLD&NATION <br></h2>
+        <h2><span class="home-black">BIENVENUE DANS LE GROUPE </span> <br> <img src="<c:url value="/resources/images/logo9.png" />" width="300px" alt="G&N"><br></h2>
       </div>
     </div>
   </div>

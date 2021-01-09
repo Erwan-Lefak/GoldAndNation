@@ -4,7 +4,7 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:set var="client" value="<%=Role.Client%>"/>
+<c:set var="client" value="<%=Role.Client%>" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,6 +28,12 @@
 				modelAttribute="user" style="width: 50%; margin: auto;">
 				<fieldset>
 					<div class="form-group">
+						<form:input id="role" name="role" class="form-control input-md"
+							required="true" path="Role" value="${client}" type="hidden" />
+						<form:input id="role1" name="role1" class="form-control input-md"
+							required="true" path="Role" value="${client}" disabled="true" />
+					</div>
+					<div class="form-group">
 						<label for="email">Email address</label>
 						<form:input type="email" class="form-control" id="email"
 							path="email" />
@@ -35,44 +41,121 @@
 					<div class="form-group">
 						<label for="nom">Nom</label>
 						<form:input id="nom" name="nom" type="text"
-							class="form-control input-md" required="" path="nom"  />
+							class="form-control input-md" required="" path="nom" />
+					</div>
+					<div class="form-group">
 						<label for="prenom">Prenom</label>
 						<form:input id="prenom" name="prenom" type="text"
-							placeholder="Prenom" class="form-control input-md" required=""
-							path="prenom" />
-						<label for="prenom">Mot de passe</label>
-						<form:input id="password" name="prenom" type="password"
-							placeholder="password" class="form-control input-md"
-							required="true" path="password"  />
-						<form:input id="role" name="role"
-							class="form-control input-md"
-							required="true" path="Role"  value="${client}" type="hidden"/>
-							<form:input id="role1" name="role1"
-							class="form-control input-md"
-							required="true" path="Role"  value="${client}" disabled="true"/>
+							class="form-control input-md" required="" path="prenom" />
+					</div>
+					<div class="form-group">
+						<label for="password">Mot de passe</label>
+						<form:input id="password" name="password" type="password"
+							class="form-control input-md" required="true" path="password" />
+					</div>
+					<div class="form-group">
+						<label for="parrain">Parrain / Marraine</label>
+						<form:input id="parrain" name="parrain" type="text"
+							class="form-control input-md" required="" path="parrain" />
 					</div>
 
 					<fieldset>
-						<label>Adresse</label>
+						<label><b>Adresse</b></label>
 						<div class="form-group">
 							<label for="rue">Rue</label>
-							<form:input id="rue" name="rue" type="text" placeholder="rue"
+							<form:input id="rue" name="rue" type="text"
 								class="form-control input-md" required="" path="adresse.rue" />
+						</div>
+						<div class="form-group">
 							<label for="numero">Numero</label>
 							<form:input id="numero" name="numero" type="number"
-								placeholder="Numero" class="form-control input-md" required=""
-								path="adresse.numero" />
-							<labelfor="ville">Ville</label>
+								class="form-control input-md" required="" path="adresse.numero" />
+						</div>
+						<div class="form-group">
+							<label for="ville">Ville</label>
 							<form:input id="ville" name="ville" type="text"
-								placeholder="ville" class="form-control input-md" required=""
-								path="adresse.ville" /> <label for="codePostal">Code
-								postal</label>
+								class="form-control input-md" required="" path="adresse.ville" />
+						</div>
+						<div class="form-group">
+							<label for="codePostal">Code postal</label>
 							<form:input id="codePostal" name="codePostal" type="number"
-								placeholder="codePostal" class="form-control input-md"
-								required="" path="adresse.codePostal" /> <label for="pays">Pays</label>
-							<form:input id="pays" name="pays" type="text" placeholder="pays"
+								class="form-control input-md" required=""
+								path="adresse.codePostal" />
+							<label for="pays">Pays</label>
+							<form:input id="pays" name="pays" type="text"
 								class="form-control input-md" required="" path="adresse.pays" />
 						</div>
+					</fieldset>
+					
+					<br>
+
+					<fieldset>
+						<h2>Objectif à l'année </h2>
+						<hr>
+
+
+
+						<div class="form-group">
+							<label for="gradevise">Grade visé en Décembre 2021</label>
+							<form:input id="gradevise" name="gradevise" type="text"
+								class="form-control" value="" required="true" path="objectif.gradevise" />
+						</div>
+
+						<div class="form-group">
+							<div class="form-group">
+								<label for="revsouhaite">Revenu souhaité en Décembre
+									2021</label>
+								<form:input id="revsouhaite" name="revsouhaite" type="number"
+									class="form-control" value="" required="true"
+									path="objectif.revsouhaite" />
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="persparraine">Nombre de personne parrainées
+								en 2021</label>
+							<form:input id="persparraine" name="persparraine" type="number"
+								class="form-control" value="" required="true"
+								path="objectif.persparraine" />
+						</div>
+
+						<br> <br> <br>
+						<h2>Objectif au mois</h2>
+						<hr>
+
+						<div class="form-group">
+							<label for="persinvitem">Nombre de personne invitées par
+								mois</label>
+							<form:input id="persinvitem" name="persinvitem" type="number"
+								class="form-control" value="" required="true" path="objectif.persinvitem" />
+						</div>
+						<div class="form-group">
+							<label for="persparraine">Nombre de personne parrainé par
+								mois</label>
+							<form:input id="persparraine" name="persparraine" type="number"
+								class="form-control" value="" required="true"
+								path="objectif.persparraine" />
+						</div>
+
+
+
+						<br> <br> <br>
+						<h2>Objectif à la semaine</h2>
+						<hr>
+						<div class="form-group">
+							<label for="persinvites">Nombre de personne invitées par
+								semaine</label>
+							<form:input id="persinvites" name="persinvites" type="number"
+								class="form-control" value="" required="true" path="objectif.persinvites" />
+						</div>
+						<div class="form-group">
+							<label for="formationassist">Nombre de formation
+								assistées par semaine</label>
+							<form:input id="formationassist" name="formationassist"
+								type="number" class="form-control" value="" required="true"
+								path="objectif.formationassist" />
+						</div>
+
 					</fieldset>
 
 

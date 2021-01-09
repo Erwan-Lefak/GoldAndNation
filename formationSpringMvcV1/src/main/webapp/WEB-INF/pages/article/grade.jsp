@@ -17,7 +17,7 @@
 	integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
 	crossorigin="anonymous">
 
-<title>Dashboard</title>
+<title>Grade</title>
 </head>
 
 
@@ -837,123 +837,10 @@ body {
 		<!-- sidebar-wrapper  -->
 		<main class="page-content">
 			<div class="container">
-				<h2>Dashboard</h2>
+				<h2>Grade</h2>
 				<hr>
 				<br>
-				<div class="row">
-					<div class="container">
-						<h2>Objectif à l'année</h2>
-						<br>
-						<h2>Je serais ${ sessionScope.user.objectif.gradevise } en Décembre 2021</h2>
-						<br>
-						<h2>Revenue : ${ sessionScope.user.objectif.revsouhaite } $/mois </h2>
-						<br>
-						<h2>Nombre de personnes parrainées en 2021 : ${ sessionScope.user.objectif.persparraine } personnes</h2>
-						<br>
-						<h2>Nombre de personnes invitées par mois : ${ sessionScope.user.objectif.persinvitem } personnes</h2>
-						<br>
-						<h2>Nombre de personnes invitées par semaine : ${ sessionScope.user.objectif.persinvites } </h2>
-						<br>
-						<h2>Nombre de formation assisté par semaine : ${ sessionScope.user.objectif.formationassist } formations et présentations</h2>
-						<br>
-						
-						<br> <br> <br>
-					</div>
-
-					<!-- <div class="form-group col-md-12">
-						<div class="alert alert-success" role="alert">
-							<h4 class="alert-heading">New !</h4>
-							<p>
-								New react pro sidebar library is now available on <a
-									href="https://www.npmjs.com/package/react-pro-sidebar"
-									target="_blank">npm</a> <a
-									href="https://github.com/azouaoui-med/react-pro-sidebar"
-									target="_blank"> <img alt="GitHub stars"
-									src="https://img.shields.io/github/stars/azouaoui-med/react-pro-sidebar?style=social" />
-								</a>
-							</p>
-							<a href="https://github.com/azouaoui-med/react-pro-sidebar"
-								target="_blank" class="btn btn-sm btn-primary mr-2"> Github</a>
-							<a href="https://azouaoui-med.github.io/react-pro-sidebar"
-								target="_blank" class="btn btn-sm btn-success"> Demo</a>
-
-						</div>
-
-					</div>
-				</div>
-				<h5>More templates</h5>
-				<hr>
-				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-						<div class="card rounded-0 p-0 shadow-sm">
-							<img
-								src="https://user-images.githubusercontent.com/25878302/58369568-a49b2480-7efc-11e9-9ca9-2be44afacda1.png"
-								class="card-img-top rounded-0" alt="Angular pro sidebar">
-							<div class="card-body text-center">
-								<h6 class="card-title">Angular Pro Sidebar</h6>
-								<a href="https://github.com/azouaoui-med/angular-pro-sidebar"
-									target="_blank" class="btn btn-primary btn-sm">Github</a> <a
-									href="https://azouaoui-med.github.io/angular-pro-sidebar/demo/"
-									target="_blank" class="btn btn-success btn-sm">Demo</a>
-								<hr>
-								<a href="https://github.com/azouaoui-med/react-pro-sidebar"
-									target="_blank"> <img alt="GitHub stars"
-									src="https://img.shields.io/github/stars/azouaoui-med/angular-pro-sidebar?style=social" />
-								</a> <a href="https://github.com/azouaoui-med/react-pro-sidebar"
-									target="_blank"> <img alt="GitHub stars"
-									src="https://img.shields.io/github/forks/azouaoui-med/angular-pro-sidebar?style=social" />
-								</a>
-
-							</div>
-
-						</div>
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-						<div class="card rounded-0 p-0 shadow-sm">
-							<img
-								src="https://user-images.githubusercontent.com/25878302/58369258-33f20900-7ef8-11e9-8ff3-b277cb7ed7b4.PNG"
-								class="card-img-top rounded-0" alt="Angular pro sidebar">
-							<div class="card-body text-center">
-								<h6 class="card-title">Angular Dashboard</h6>
-								<a
-									href="https://github.com/azouaoui-med/lightning-admin-angular"
-									target="_blank" class="btn btn-primary btn-sm">Github</a> <a
-									href="https://azouaoui-med.github.io/lightning-admin-angular/demo/"
-									target="_blank" class="btn btn-success btn-sm">Demo</a>
-								<hr>
-								<a href="https://github.com/azouaoui-med/react-pro-sidebar"
-									target="_blank"> <img alt="GitHub stars"
-									src="https://img.shields.io/github/stars/azouaoui-med/lightning-admin-angular?style=social" />
-								</a> <a href="https://github.com/azouaoui-med/react-pro-sidebar"
-									target="_blank"> <img alt="GitHub stars"
-									src="https://img.shields.io/github/forks/azouaoui-med/lightning-admin-angular?style=social" />
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<hr>
-
-				<footer class="text-center">
-					<div class="mb-2">
-						<small> © 2020 made with <i class="fa fa-heart"
-							style="color: red"></i> by - <a target="_blank"
-							rel="noopener noreferrer" href="https://azouaoui.netlify.com">
-								Mohamed Azouaoui </a>
-						</small>
-					</div>
-
-					<div>
-						<a href="https://github.com/azouaoui-med" target="_blank"> <img
-							alt="GitHub followers"
-							src="https://img.shields.io/github/followers/azouaoui-med?label=github&style=social" />
-						</a> <a href="https://twitter.com/azouaoui_med" target="_blank"> <img
-							alt="Twitter Follow"
-							src="https://img.shields.io/twitter/follow/azouaoui_med?label=twitter&style=social" />
-						</a>
-					</div>
-				</footer> -->
-			</div>
+				
 			</div>
 		</main>
 	</div>

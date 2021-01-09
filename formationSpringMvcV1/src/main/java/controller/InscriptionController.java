@@ -26,7 +26,7 @@ public class InscriptionController {
 	@Autowired
 	private ParticulierRepository partRepository;
 	@Autowired
-	EntrepriseRepository entRepo;
+	private EntrepriseRepository entRepo;
 
 	@GetMapping("/pre")
 	public String inscription(Model model) {
