@@ -17,7 +17,7 @@
 	integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
 	crossorigin="anonymous">
 
-<title>Grade</title>
+<title>Stratégie Réseau</title>
 </head>
 
 
@@ -837,7 +837,7 @@ body {
 		<!-- sidebar-wrapper  -->
 		<main class="page-content">
 			<div class="container">
-				<h2>Grade</h2>
+				<h2>Stratégie Réseau</h2>
 				<hr>
 				<br>
 				

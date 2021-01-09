@@ -460,7 +460,7 @@ body {
 .sidebar-wrapper .sidebar-brand {
 	padding: 10px 20px;
 	display: flex;
-	align-items: center;
+	align-items: right;
 }
 
 .sidebar-wrapper .sidebar-brand>a {
@@ -548,7 +548,7 @@ body {
 	width: 30px;
 	height: 30px;
 	line-height: 30px;
-	text-align: center;
+	text-align: right;
 	border-radius: 4px;
 }
 
@@ -568,7 +568,7 @@ body {
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	text-align: center;
+	text-align: right;
 	background: 0 0;
 	position: absolute;
 	right: 15px;
@@ -591,7 +591,7 @@ body {
 	font-weight: 400;
 	font-style: normal;
 	display: inline-block;
-	text-align: center;
+	text-align: right;
 	text-decoration: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -632,7 +632,7 @@ body {
 
 .sidebar-footer>a {
 	flex-grow: 1;
-	text-align: center;
+	text-align: right;
 	height: 30px;
 	line-height: 30px;
 	position: relative;
@@ -842,25 +842,68 @@ body {
 				<br>
 				<div class="row">
 					<div class="container">
-						<h2>Objectif à l'année</h2>
-						<br>
-						<h2>Je serais ${ sessionScope.user.objectif.gradevise } en Décembre 2021</h2>
-						<br>
-						<h2>Revenue : ${ sessionScope.user.objectif.revsouhaite } $/mois </h2>
-						<br>
-						<h2>Nombre de personnes parrainées en 2021 : ${ sessionScope.user.objectif.persparraine } personnes</h2>
-						<br>
-						<h2>Nombre de personnes invitées par mois : ${ sessionScope.user.objectif.persinvitem } personnes</h2>
-						<br>
-						<h2>Nombre de personnes invitées par semaine : ${ sessionScope.user.objectif.persinvites } </h2>
-						<br>
-						<h2>Nombre de formation assisté par semaine : ${ sessionScope.user.objectif.formationassist } formations et présentations</h2>
-						<br>
-						
-						<br> <br> <br>
-					</div>
 
-					<!-- <div class="form-group col-md-12">
+
+						<div class="col-lg-9" style="margin-left: 100px">
+							<table class="table" style="paddle:100px">
+								<thead>
+									<tr>
+										<th scope="col" style="color:#0f23d4"><h2><B>Objectif de l'année</B></h2></th>
+										<th scope="col"></th>
+									</tr>
+								</thead>
+								<tbody>
+
+									<tr>
+										<td><h2>Grade en Décembre 2021</h2></td>
+										<td><h2 style="text-align: right">${sessionScope.user.objectif.gradevise}</h2></td>
+										
+
+									</tr>
+									<tr>
+										<td><h2>Revenue souhaitée</h2></td>
+										<td><h2 style="text-align: right">${sessionScope.user.objectif.revsouhaite} $/mois</h2></td>
+										
+									</tr>
+									<tr>
+										<td><h2>Nombre de Filleul</h2></td>
+										<td><h2 style="text-align: right">${sessionScope.user.objectif.persparraine} personnes</h2></td>
+										
+									</tr>
+									<tr>
+										<th scope="col" style="color:#0f23d4"><h2><B>Objectif du mois</B></h2></th>
+										<th scope="col"></th>
+									</tr>
+									<tr>
+										<td><h2>J'invite</h2></td>
+										<td><h2 style="text-align: right">${sessionScope.user.objectif.persinvitem} personnes</h2></td>
+										
+									</tr>
+									<tr>
+										<th scope="col" style="color:#0f23d4"><h2><B>Objectif de la semaine</B></h2></th>
+										<th scope="col"></th>
+									</tr>
+									<tr>
+									<tr>
+										<td><h2>J'invite</h2></td>
+										<td><h2 style="text-align: right">${sessionScope.user.objectif.persinvites} personnes</h2></td>
+										
+									</tr>
+									<tr>
+										<td><h2>J'assiste à</h2></td>
+										<td><h2 style="text-align: right">${sessionScope.user.objectif.formationassist} zoom (présentations + formations)</h2></td>
+										
+									</tr>
+									
+									
+
+								</tbody>
+							</table>
+							
+							<a class="btn btn-primary "  href="<c:url value='/profil/edit/objectif/${sessionScope.user.id}'/>">Modifier profil</a>
+						</div>
+
+						<!-- <div class="form-group col-md-12">
 						<div class="alert alert-success" role="alert">
 							<h4 class="alert-heading">New !</h4>
 							<p>
@@ -889,7 +932,7 @@ body {
 							<img
 								src="https://user-images.githubusercontent.com/25878302/58369568-a49b2480-7efc-11e9-9ca9-2be44afacda1.png"
 								class="card-img-top rounded-0" alt="Angular pro sidebar">
-							<div class="card-body text-center">
+							<div class="card-body text-right">
 								<h6 class="card-title">Angular Pro Sidebar</h6>
 								<a href="https://github.com/azouaoui-med/angular-pro-sidebar"
 									target="_blank" class="btn btn-primary btn-sm">Github</a> <a
@@ -913,7 +956,7 @@ body {
 							<img
 								src="https://user-images.githubusercontent.com/25878302/58369258-33f20900-7ef8-11e9-8ff3-b277cb7ed7b4.PNG"
 								class="card-img-top rounded-0" alt="Angular pro sidebar">
-							<div class="card-body text-center">
+							<div class="card-body text-right">
 								<h6 class="card-title">Angular Dashboard</h6>
 								<a
 									href="https://github.com/azouaoui-med/lightning-admin-angular"
@@ -934,7 +977,7 @@ body {
 				</div>
 				<hr>
 
-				<footer class="text-center">
+				<footer class="text-right">
 					<div class="mb-2">
 						<small> © 2020 made with <i class="fa fa-heart"
 							style="color: red"></i> by - <a target="_blank"
@@ -953,10 +996,12 @@ body {
 						</a>
 					</div>
 				</footer> -->
-			</div>
+					</div>
+				</div>
 			</div>
 		</main>
 	</div>
+
 
 
 	<!-- page-content" -->

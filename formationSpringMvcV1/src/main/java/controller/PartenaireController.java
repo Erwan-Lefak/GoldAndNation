@@ -31,18 +31,6 @@ public class PartenaireController {
 
 	@Autowired
 	private PartenaireRepository repository;
-
-	
-	/*
-	 * @GetMapping("/accueil") public String getByBestOf(Model model,
-	 * HttpServletRequest ht) {
-	 * 
-	 * if (ht.getSession().getAttribute("panier") == null) { Commande commande = new
-	 * Commande(); ht.getSession().setAttribute("panier", commande); }
-	 * 
-	 * model.addAttribute("partenaires",repository.findAll()); return
-	 * "home/accueil"; }
-	 */
 	
 	@GetMapping("/partenaires")
 	public String getAll(Model model, HttpServletRequest ht) {
@@ -53,111 +41,48 @@ public class PartenaireController {
 
 	
 	 @PostMapping("/partenaires") 
-	 public String getAll3(Model model, HttpServletRequest ht) {
+	 public String getAll2(Model model, HttpServletRequest ht) {
 	  
 	 model.addAttribute("partenaires", repository.findAll());
 	 
-		/* model.addAttribute("categories", categRepository.findAll()); */
+		
+		 return "article/partenaires"; }
+	 
+	 @GetMapping("/temoignages")
+		public String getAll3(Model model, HttpServletRequest ht) {
+			model.addAttribute("partenaires", repository.findAll());
+
+			return "article/temoignages";
+		}
 
 		
-		/*
-		 * Commande panier = (Commande) ht.getSession().getAttribute("panier");
-		 * 
-		 * if (ht.getParameter("partenaireId") != null) { int articleId =
-		 * Integer.parseInt(ht.getParameter("partenaireId")); boolean ligneAlreadyExists
-		 * = false; for (LigneCommande ligneCommande : panier.getLignesCommande()) { if
-		 * (ligneCommande.getPartenaire().getId() == articleId) { ligneAlreadyExists =
-		 * true; ligneCommande.setQuantite(ligneCommande.getQuantite() + 1); } } if
-		 * (!ligneAlreadyExists) panier.addLigneCommande(new LigneCommande(panier,
-		 * repository.findById(articleId).get(), 1)); }
-		 * 
-		 * if (ht.getParameter("supp") != null) { int ligneId =
-		 * Integer.parseInt(ht.getParameter("supp")); for (LigneCommande ligneCommande :
-		 * panier.getLignesCommande()) { if (ligneCommande.getPartenaire().getId() ==
-		 * ligneId) { panier.getLignesCommande().remove(ligneCommande); break; } } }
-		 * 
-		 * if (ht.getParameter("plus") != null) { int ligneId =
-		 * Integer.parseInt(ht.getParameter("plus")); for (LigneCommande ligneCommande :
-		 * panier.getLignesCommande()) { if (ligneCommande.getPartenaire().getId() ==
-		 * ligneId) { ligneCommande.setQuantite(ligneCommande.getQuantite() + 1); ;
-		 * break; } } }
-		 * 
-		 * if (ht.getParameter("moins") != null) { int ligneId =
-		 * Integer.parseInt(ht.getParameter("moins")); for (LigneCommande ligneCommande
-		 * : panier.getLignesCommande()) { if (ligneCommande.getPartenaire().getId() ==
-		 * ligneId) { ligneCommande.setQuantite(ligneCommande.getQuantite() - 1); if
-		 * (ligneCommande.getQuantite() == 0)
-		 * panier.getLignesCommande().remove(ligneCommande); break; } } }
-		 * 
-		 * if (ht.getParameter("passerCommande") != null) { // do whatever you want my
-		 * dear friend Ayoub }
-		 * 
-		 * panier.setPrix(); ht.getSession().setAttribute("panier", panier);
-		 */
-		/**/
-		 return "article/partenaires"; }
+		 @PostMapping("/temoignages") 
+		 public String getAll4(Model model, HttpServletRequest ht) {
+			
+			 return "article/temoignages"; }
+		 
+		 @GetMapping("/tutoriels")
+			public String getAll5(Model model, HttpServletRequest ht) {
+
+				return "article/tutoriels";
+			}
+
+			
+			 @PostMapping("/tutoriels") 
+			 public String getAll6(Model model, HttpServletRequest ht) {
+				
+				 return "article/tutoriels"; }
 		 
 
 	
 	 @GetMapping("/categorie/{id}") public String getByCateg(Model model,
 	 HttpServletRequest ht, @PathVariable(name = "id") int id) {
-	 /*
-	 * model.addAttribute("categories", categRepository.findAll());
-	 * 
-	 * Categorie catchoisie = categRepository.findById(id).get();
-	 * 
-	 * model.addAttribute("heure", LocalTime.now());
-	 * 
-	 * if (Time.valueOf(LocalTime.now()).before(catchoisie.getDebut()) ||
-	 * Time.valueOf(LocalTime.now()).after(catchoisie.getFin())) {
-	 * 
-	 * return "article/cestpaslheure"; }
-	 * 
-	 * List<Partenaire> list = repository.findAllByCategories_id(id);
-	 * model.addAttribute("partenaires", list);
-	 * 
-	 **/ return "partenaire/partenaires"; }
+	 
+	 return "partenaire/partenaires"; }
 	  
 	 @PostMapping("/categorie/{id}") public String getByCateg1(Model model,
 	 HttpServletRequest ht, @PathVariable(name = "id") int id) {
-	/*
-	 * List<Partenaire> list = repository.findAllByCategories_id(id);
-	 * model.addAttribute("partenaires", list); model.addAttribute("categories",
-	 * categRepository.findAll());
-	 * 
-	 * Commande panier = (Commande) ht.getSession().getAttribute("panier");
-	 * 
-	 * if (ht.getParameter("articleId") != null) { int articleId =
-	 * Integer.parseInt(ht.getParameter("articleId")); boolean ligneAlreadyExists =
-	 * false; for (LigneCommande ligneCommande : panier.getLignesCommande()) { if
-	 * (ligneCommande.getPartenaire().getId() == articleId) { ligneAlreadyExists =
-	 * true; ligneCommande.setQuantite(ligneCommande.getQuantite() + 1); } } if
-	 * (!ligneAlreadyExists) panier.addLigneCommande(new LigneCommande(panier,
-	 * repository.findById(articleId).get(), 1)); }
-	 * 
-	 * if (ht.getParameter("supp") != null) { int ligneId =
-	 * Integer.parseInt(ht.getParameter("supp")); for (LigneCommande ligneCommande :
-	 * panier.getLignesCommande()) { if (ligneCommande.getPartenaire().getId() ==
-	 * ligneId) { panier.getLignesCommande().remove(ligneCommande); break; } } }
-	 * 
-	 * if (ht.getParameter("plus") != null) { int ligneId =
-	 * Integer.parseInt(ht.getParameter("plus")); for (LigneCommande ligneCommande :
-	 * panier.getLignesCommande()) { if (ligneCommande.getPartenaire().getId() ==
-	 * ligneId) { ligneCommande.setQuantite(ligneCommande.getQuantite() + 1); ;
-	 * break; } } }
-	 * 
-	 * if (ht.getParameter("moins") != null) { int ligneId =
-	 * Integer.parseInt(ht.getParameter("moins")); for (LigneCommande ligneCommande
-	 * : panier.getLignesCommande()) { if (ligneCommande.getPartenaire().getId() ==
-	 * ligneId) { ligneCommande.setQuantite(ligneCommande.getQuantite() - 1); if
-	 * (ligneCommande.getQuantite() == 0)
-	 * panier.getLignesCommande().remove(ligneCommande); break; } } }
-	 * 
-	 * if (ht.getParameter("passerCommande") != null) { // do whatever you want my
-	 * dear friend Ayoub }
-	 * 
-	 * panier.setPrix(); ht.getSession().setAttribute("panier", panier);
-	 **/ 
+	
 	 return "partenaire/partenaires"; }
 	 
 

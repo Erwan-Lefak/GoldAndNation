@@ -840,7 +840,7 @@ body {
 				<h2>Support</h2>
 				<hr>
 				<br>
-				
+				<h3>Contactez nous par mail pour tout renseignement en cliquant sur le bouton </h3> <br> <a class="btn btn-info " href="mailto:goldandnation@gmail.com" class="email">Contacter Support</a>
 			</div>
 		</main>
 	</div>

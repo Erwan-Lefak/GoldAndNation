@@ -14,26 +14,25 @@
 			
 			
 		<li class="nav-item active">
-        <a class="nav-link" href="<c:url value='/'/>">Entreprise <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<c:url value='/'/>">Groupe <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="<c:url value='/partenaire/partenaires'/>">Partenaires <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="<c:url value='/'/>">Temoignages <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<c:url value='/partenaire/temoignages'/>">Temoignages <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="https://omegapro.world/" target="_blank">OmegaPro <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="<c:url value='/'/>">Tutoriels <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<c:url value='/partenaire/tutoriels'/>">Tutoriels <span class="sr-only">(current)</span></a>
       </li>
 		</ul>
 		<div class="btn-toolbar">
 			<ul class="nav navbar-nav ml-auto">
 				<li style="margin: 7px 20px 10px 0px;">Bienvenue ${ sessionScope.user.prenom }</li> <!-- Bienvenue ${ sessionScope.user.prenom } -->
 				<li><a class="btn btn-default" href="<c:url value='/profil/dashboard/'/>" target="_blank">Dashboard</a></li>
-				<li><a class="btn btn-default" href="<c:url value='/profil/dashboard/'/>" target="_blank">Profil</a></li>
 				<li><a class="btn btn-default" href="<c:url value='/deco/after'/>">Déconnexion</a></li>
 			</ul>
 		</div>

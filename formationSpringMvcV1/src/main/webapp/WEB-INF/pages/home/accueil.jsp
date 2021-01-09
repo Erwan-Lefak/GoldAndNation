@@ -531,7 +531,7 @@ h4 {
       <div class="col-xs-12 h1-orange text-center">
 
         <h2>NOTRE ENGAGEMENT <br> <b> <span class="home-black">POUR VOUS</span></b></h2>
-        <p>Vous aider à atteindre vos objectifs financiers à travers le marketing relationnel qui est nous vous l’assurons la meilleure industrie au monde</p>
+        <p>Vous aider à atteindre vos objectifs financiers à travers le marketing relationnel <br>qui est nous vous l’assurons la meilleure industrie au monde</p>
         <br>
         <br>
       </div>
@@ -550,7 +550,7 @@ h4 {
         <br>
         <h2>UNE MEILLEURE ALTERNATIVE <br><span class="home-black">POUR VOTRE BUSINESS</span><br></h2> <!-- <span class="home-black">POUR VOTRE ENTREPRISE</span></b></h2> -->
 			<p>Vous êtes volontaire, <br> Vous désirez apprendre, <br> Vous avez soif de succès</p>
-        <h2><span class="home-black">BIENVENUE DANS LE GROUPE </span> <br> <img src="<c:url value="/resources/images/logo9.png" />" width="300px" alt="G&N"><br></h2>
+        <h2><span class="home-black">BIENVENUE DANS LE GROUPE </span> <br><br> <img src="<c:url value="/resources/images/logo9.png" />" width="300px" alt="G&N"><br></h2>
       </div>
     </div>
   </div>
@@ -657,14 +657,13 @@ h4 {
         <div class="col-xs-12 col-sm-4">
           <h4>Plan du site</h4>
           <p>
-            <a href="<c:url value='/'/>">Accueil</a>
-            <br><a href="<c:url value='/partenaire/partenaires'/>">Partenaire</a>
-            <br><a href="/blogs">Blog</a>
+            <a href="<c:url value='/'/>">Groupe</a>
+            <br><a href="<c:url value='/partenaire/partenaires'/>">Partenaires</a>
             <br><a href="/">Temoignages</a>
-            <br><a href="/food-truck">Inscription</a>
-            <br><a href="/team">Connexion</a>
-            <br><a href="/cgu">CGU</a>
-            <br><a href="/mentionslegales">Mentions Légales</a>
+            <br><a href="<c:url value='/inscription/pre'/>">Inscription</a>
+            <br><a href="<c:url value='/login/loginForm'/>">Connexion</a>
+            <br><a href="">CGU</a>
+            <br><a href="">Mentions Légales</a>
           </p>
         </div>
         <div class="col-xs-12 col-sm-4">
@@ -677,7 +676,7 @@ h4 {
           <p>
             Gold&Nation propose des solutions de gestion de réseau pour les particuliers et les associations.
             <br><br>
-            Notre mission ? Vous faire gagner du temps avec un système performant !
+            Notre mission ? Vous aider à atteindre la liberté financière avec un système performant !
           </p>
         </div>
       </div>

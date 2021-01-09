@@ -18,7 +18,7 @@
 	<div class="container">
 		<div class="row">
 			<form class="form-horizontal" style="width: 50%; margin: auto;"
-				action="" method="post">
+				action="<c:url value='/login/loginForm'/>" method="post">
 				<fieldset>
 						<div class="form-group">
 							<label for="email">Email address</label> <input

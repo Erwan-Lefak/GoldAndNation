@@ -14,13 +14,13 @@
 			
 			
 			<li class="nav-item active">
-        <a class="nav-link" href="<c:url value='/'/>">Entreprise <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<c:url value='/'/>">Groupe <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="<c:url value='/partenaire/partenaires'/>">Partenaires <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="<c:url value='/'/>">Temoignages <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<c:url value='/partenaire/temoignages'/>">Temoignages <span class="sr-only">(current)</span></a>
       </li>
 		</ul>
       

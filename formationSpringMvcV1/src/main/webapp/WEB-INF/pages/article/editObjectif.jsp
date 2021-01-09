@@ -18,14 +18,14 @@
 </head>
 <body>
 	<!-- header -->
-	<jsp:include page='../includes/navbar.jsp' />
+	<jsp:include page='../includes/navbar-logged.jsp' />
 	<!-- fin header -->
 	<!-- content -->
 	<h1 class="display-4 text-primary">Inscription</h1>
 	<div class="container">
 		<div class="row">
 			<form:form class="form-horizontal" action="" method="post"
-				modelAttribute="user" style="width: 50%; margin: auto;">
+				modelAttribute="particulieredit" style="width: 50%; margin: auto;">
 				<fieldset>
 					<div class="form-group">
 						<form:input id="role" name="role" class="form-control input-md"
@@ -83,14 +83,14 @@
 								path="adresse.codePostal" />
 							<label for="pays">Pays</label>
 							<form:input id="pays" name="pays" type="text"
-								class="form-control input-md" required="" path="adresse.pays" />
+								class="form-control input-md" required="true" path="adresse.pays" />
 						</div>
 					</fieldset>
-
+					
 					<br>
 
 					<fieldset>
-						<h2>Objectif à l'année</h2>
+						<h2>Objectif à l'année </h2>
 						<hr>
 
 
@@ -98,14 +98,13 @@
 						<div class="form-group">
 							<label for="gradevise">Grade visé en Décembre 2021</label>
 							<form:input id="gradevise" name="gradevise" type="text"
-								class="form-control" value="" required="true"
-								path="objectif.gradevise" placeholder="Ex: Diamond" />
+								class="form-control" value="" required="true" path="objectif.gradevise" />
 						</div>
 
 						<div class="form-group">
 							<div class="form-group">
 								<label for="revsouhaite">Revenu souhaité en Décembre
-									2021 (en $/mois)</label>
+									2021</label>
 								<form:input id="revsouhaite" name="revsouhaite" type="number"
 									class="form-control" value="" required="true"
 									path="objectif.revsouhaite" />
@@ -128,12 +127,11 @@
 							<label for="persinvitem">Nombre de personnes invitées par
 								mois</label>
 							<form:input id="persinvitem" name="persinvitem" type="number"
-								class="form-control" value="" required="true"
-								path="objectif.persinvitem" />
+								class="form-control" value="" required="true" path="objectif.persinvitem" />
 						</div>
 						<div class="form-group">
-							<label for="persparraine">Nombre de personnes parrainé
-								par mois</label>
+							<label for="persparraine">Nombre de personnes parrainé par
+								mois</label>
 							<form:input id="persparraine" name="persparraine" type="number"
 								class="form-control" value="" required="true"
 								path="objectif.persparraine" />
@@ -148,8 +146,7 @@
 							<label for="persinvites">Nombre de personnes invitées par
 								semaine</label>
 							<form:input id="persinvites" name="persinvites" type="number"
-								class="form-control" value="" required="true"
-								path="objectif.persinvites" />
+								class="form-control" value="" required="true" path="objectif.persinvites" />
 						</div>
 						<div class="form-group">
 							<label for="formationassist">Nombre de formations

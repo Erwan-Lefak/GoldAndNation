@@ -22,7 +22,6 @@
 	<h1 class="display-4 text-primary ">Liste des produits</h1>
 	<a class="btn btn-primary float-right" style="margin-right: 15px;" href="<c:url value='/gerant/addProduct/'/> ">Ajouter un gérant</a>
 	
-	</br>
 	<div class="container">
 	 <table class="table">
     <thead>
